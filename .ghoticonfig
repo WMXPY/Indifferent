@@ -1,0 +1,43 @@
+{
+    "type": "project",
+    "template": "react",
+    "sub": "normal",
+    "version": "3.3.8",
+    "title": "indifferent",
+    "description": "indifferent ui",
+    "author": "WMXPY",
+    "config": {
+        "router": {
+            "router": "react-router-dom",
+            "config": {
+                "router": "browser-router"
+            }
+        },
+        "pack": "webpack",
+        "test": {
+            "test": "mocha",
+            "expect": "code",
+            "render": "enzyme"
+        },
+        "style": "sass",
+        "sub": "typescript"
+    },
+    "underline": {
+        "active": false
+    },
+    "components": [
+        
+    ],
+    "pages": [
+
+    ],
+    "funcs": [
+
+    ],
+    "lambdas": [
+        
+    ],
+    "features": [
+        
+    ]
+}
