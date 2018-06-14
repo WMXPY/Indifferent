@@ -5,7 +5,6 @@
     "private": false,
     "scripts": {
         "hint": "ghoti post -a react-normal",
-        "postinstall": "ghoti post -a react-normal",
         "start": "webpack-dev-server --config webpack/webpack.dev.js --open",
         "test": "mocha"
     },
