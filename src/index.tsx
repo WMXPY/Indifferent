@@ -6,12 +6,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
-import { BrowserRouter } from 'react-router-dom';
 
 import Hello from './hello';
-import Config from './config/config';
-
-import './style/global.sass';
 
 declare const module: any;
 declare const require: any;
@@ -19,9 +15,7 @@ declare const require: any;
 const render = (App: any) => {
     ReactDOM.render(
         <AppContainer>
-            <BrowserRouter>
-                <App />
-            </BrowserRouter>
+            <App />
         </AppContainer>,
         document.getElementById('container'));
 };

@@ -4,13 +4,7 @@
  */
 
 import * as React from 'react';
-import * as Component from './component/import';
-import * as Func from './func/import';
-import * as Lambda from './lambda/import';
-import * as Page from './page/import';
-
-import { Route } from 'react-router-dom';
-import Config from './config/config';
+import * as Components from './components/import';
 
 class Hello extends React.Component<{}, {}> {
     public constructor(props) {
@@ -20,12 +14,12 @@ class Hello extends React.Component<{}, {}> {
     public render() {
         return (
             <React.Fragment>
-                <Route path="/hello" component={() => {
-                    return <div>Route</div>;
-                }} />
-                <Route path="/" exact component={() => {
-                    return <div>Home</div>;
-                }} />
+                <Components.Container>
+                    Container Exmaple
+                </Components.Container>
+                <Components.Paper title="paper">
+                    Paper example
+                </Components.Paper >
             </React.Fragment>
         );
     }

@@ -6,13 +6,10 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const BUILD_DIR = path.resolve(__dirname, '..', 'dist');
 const APP_DIR = path.resolve(__dirname, '..', 'src');
 const PUBLIC_DIR = path.resolve(__dirname, '..', 'public', 'template.html');
-const FAVICON_DIR = path.resolve(__dirname, '..', 'public', 'favicon.png');
-const MANIFEST_DIR = path.resolve(__dirname, '..', 'public', 'manifest.json');
 
 let config = {
     devtool: 'cheap-module-eval-source-map',
@@ -28,45 +25,24 @@ let config = {
         publicPath: '/'
     },
     resolve: {
-        extensions: [".ts", ".tsx", ".js", ".json", ".css", ".sass"]
+        extensions: [".ts", ".tsx", ".js", ".json"]
     },
     module: {
         rules: [{
-                test: /\.tsx?$/,
-                use: [{
-                    loader: 'awesome-typescript-loader',
-                    options: {
-                        configFileName: './tsconfig.json'
-                    }
-                }]
-            },
-            {
-                test: /\.sass$/,
-                use: [
-                    'style-loader',
-                    'css-loader',
-                    'sass-loader'
-                ]
-            },
-            {
-                enforce: "pre",
-                test: /\.(t|j)sx?$/,
-                loader: "source-map-loader",
-            }
-        ]
+            test: /\.tsx?$/,
+            use: [{
+                loader: 'awesome-typescript-loader',
+                options: {
+                    configFileName: './tsconfig.json'
+                }
+            }]
+        }]
     },
     plugins: [
         new HtmlWebpackPlugin({
             title: 'indifferent',
             template: PUBLIC_DIR
         }),
-        new CopyWebpackPlugin([{
-            from: FAVICON_DIR,
-            to: BUILD_DIR,
-        }, {
-            from: MANIFEST_DIR,
-            to: BUILD_DIR,
-        }], {}),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
         }),
