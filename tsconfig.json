@@ -9,7 +9,8 @@
         "removeComments": true,
         "strictNullChecks": false,
         "noImplicitThis": false,
-        "sourceMap": true,
+        "sourceMap": false,
+        "declaration": true,
         "jsx": "react",
         "lib": [
             "dom",

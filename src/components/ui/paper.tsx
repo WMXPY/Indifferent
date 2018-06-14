@@ -42,7 +42,7 @@ class IndifferentContainer extends React.Component<IProps, {}> {
         super(props);
     }
 
-    public render() {
+    public render(): JSX.Element {
         return (
             <div style={styles.paper}>
                 <div style={styles.title}>
