@@ -2,6 +2,7 @@ src
 public
 feature
 node_modules
+.travis.yml
 .gitignore
 package-lock.json
 tsconfig.json
