@@ -1,6 +1,11 @@
 # indifferent
 
-indifferent ui
+[![npm version](https://badge.fury.io/js/indifferent.svg)](https://badge.fury.io/js/indifferent)
+[![Build Status](https://travis-ci.org/WMXPY/Indifferent.svg?branch=master)](https://travis-ci.org/WMXPY/Indifferent)
+[![Gitter](https://badges.gitter.im/WMXPY/indifferent.svg)](https://gitter.im/indifferent?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![downloads](https://img.shields.io/npm/dm/indifferent.svg)](https://www.npmjs.com/package/indifferent)
+
+:icecream: A indifferent UI for react
 
 ### Install
 

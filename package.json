@@ -1,12 +1,28 @@
 {
     "name": "indifferent",
     "version": "0.0.0",
-    "description": "indifferent ui",
+    "description": ":icecream: A indifferent UI for react",
     "private": false,
     "scripts": {
         "hint": "ghoti post -a react-normal",
         "start": "webpack-dev-server --config webpack/webpack.dev.js --open",
         "test": "mocha"
+    },
+    "main": "dist/import.js",
+    "directories": {
+        "doc": "doc"
+    },
+    "bugs": {
+        "url": "https://github.com/WMXPY/Indifferent/issues"
+    },
+    "homepage": "https://github.com/WMXPY/Indifferent#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/WMXPY/Indifferent.git"
+    },
+    "devEngines": {
+        "node": ">=7.x",
+        "npm": ">=4.x"
     },
     "author": "WMXPY",
     "license": "SEE LICENSE IN LICENSE",

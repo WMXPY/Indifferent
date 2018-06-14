@@ -10,3 +10,4 @@ tslint.json
 .eslintrc.json
 test
 render
+doc

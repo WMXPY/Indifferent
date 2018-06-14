@@ -6,7 +6,6 @@ install:
  - tsc
 
 node_js:
- - '5'
  - '7'
  - '9'
 
