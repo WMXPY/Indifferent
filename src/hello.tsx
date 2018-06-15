@@ -23,6 +23,14 @@ class Hello extends React.Component<{}, {}> {
                         123
                     </Components.Button>
                 </Components.Paper >
+                <Components.Paper title="Button Group">
+                    <Components.Button>
+                        BUTTON1
+                    </Components.Button>
+                    <Components.Button>
+                        BUTTON2
+                    </Components.Button>
+                </Components.Paper >
             </React.Fragment>
         );
     }
