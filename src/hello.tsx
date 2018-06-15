@@ -19,6 +19,9 @@ class Hello extends React.Component<{}, {}> {
                 </Components.Container>
                 <Components.Paper title="paper">
                     Paper example
+                    <Components.Button>
+                        123
+                    </Components.Button>
                 </Components.Paper >
             </React.Fragment>
         );

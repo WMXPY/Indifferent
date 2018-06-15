@@ -1,11 +1,17 @@
 /**
  * @author WMXPY
- * @fileoverview Container
+ * @fileoverview Template
  */
 
 import * as React from 'react';
 
 import { colors } from '../styles/color';
+
+export interface IProps {
+}
+
+export interface IState {
+}
 
 const styles: {
     [key: string]: React.CSSProperties;
@@ -16,7 +22,7 @@ const styles: {
     },
 };
 
-class IndifferentContainer extends React.Component<{}, {}> {
+class IndifferentContainer extends React.Component<IProps, IState> {
     public constructor(props) {
         super(props);
     }

@@ -1,11 +1,18 @@
 /**
  * @author WMXPY
- * @fileoverview Container
+ * @fileoverview Button
  */
 
 import * as React from 'react';
 
 import { colors } from '../styles/color';
+
+export interface IProps {
+    onClick?: () => void;
+}
+
+export interface IState {
+}
 
 const styles: {
     [key: string]: React.CSSProperties;
@@ -16,18 +23,20 @@ const styles: {
     },
 };
 
-class IndifferentContainer extends React.Component<{}, {}> {
+class IndifferentButton extends React.Component<IProps, IState> {
     public constructor(props) {
         super(props);
     }
 
     public render(): JSX.Element {
         return (
-            <div style={styles.container}>
+            <button
+                style={styles.container}
+            >
                 {this.props.children}
-            </div>
+            </button>
         );
     }
 }
 
-export default IndifferentContainer;
+export default IndifferentButton;
