@@ -25,13 +25,37 @@ class Hello extends React.Component<{}, {}> {
                 </Components.Paper >
                 <Components.Paper title="Button Group">
                     <Components.Flex>
-                        <Components.Button>
+                        <Components.Button flex={1} style={{
+                            margin: '3px',
+                        }}>
                             BUTTON1
                         </Components.Button>
-                        <Components.Button>
+                        <Components.Button flex={2} style={{
+                            margin: '3px',
+                        }}>
                             BUTTON2
                         </Components.Button>
                     </Components.Flex>
+                    <Components.Flex>
+                        <Components.Button flex={1} style={{
+                            margin: '3px',
+                        }}>
+                            BUTTON1
+                        </Components.Button>
+                        <Components.Button flex={1} style={{
+                            margin: '3px',
+                        }}>
+                            BUTTON2
+                        </Components.Button>
+                    </Components.Flex>
+                </Components.Paper >
+                <Components.Paper title="DARK SIDE">
+                    <Components.Button dark>
+                        DARKBUTTON
+                    </Components.Button>
+                    <Components.Button dark disabled>
+                        DISABLED
+                    </Components.Button>
                 </Components.Paper >
             </React.Fragment>
         );

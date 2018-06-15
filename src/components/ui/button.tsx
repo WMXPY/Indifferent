@@ -12,6 +12,8 @@ export interface IProps {
     style?: React.CSSProperties;
     className?: string;
     flex?: number;
+    dark?: boolean;
+    disabled?: boolean;
 }
 
 export interface IState {
@@ -23,12 +25,37 @@ const styles: {
 } = {
     container: {
         padding: '3px',
-        border: '0',
         backgroundColor: 'white',
         cursor: 'pointer',
+        minHeight: '40px',
+        fontSize: '18px',
+        transition: '0.3s all',
     },
-    hover: {
-        backgroundColor: 'red',
+    hover_normal: {
+        backgroundColor: 'lightblue',
+    },
+    hover_dark: {
+        border: `5px solid ${colors.navy}`,
+        backgroundColor: colors.white,
+        color: colors.navy,
+    },
+    dark: {
+        border: `5px solid ${colors.trans}`,
+        backgroundColor: colors.navy,
+        color: colors.white,
+    },
+    normal: {
+        border: `5px solid ${colors.navy}`,
+    },
+    disabled_dark: {
+        border: `5px solid ${colors.navy}`,
+        backgroundColor: colors.white,
+        color: colors.gray,
+    },
+    disabled_normal: {
+        border: `5px solid ${colors.navy}`,
+        backgroundColor: colors.white,
+        color: colors.gray,
     },
 };
 
@@ -39,7 +66,9 @@ class IndifferentButton extends React.Component<IProps, IState> {
             hover: false,
         };
 
+        this.getStyle = this.getStyle.bind(this);
         this.getSizeInfo = this.getSizeInfo.bind(this);
+        this.getHoverStyle = this.getHoverStyle.bind(this);
 
         this.handleMouseIn = this.handleMouseIn.bind(this);
         this.handleMouseOut = this.handleMouseOut.bind(this);
@@ -51,17 +80,42 @@ class IndifferentButton extends React.Component<IProps, IState> {
                 style={{
                     ...styles.container,
                     ...this.getSizeInfo(),
-                    ...this.state.hover ? styles.hover : {},
+                    ...this.getStyle(),
                     ...this.props.style,
                 }}
                 className={this.props.className}
 
                 onMouseEnter={this.handleMouseIn}
                 onMouseLeave={this.handleMouseOut}
+
+                onClick={this.props.onClick}
+
+                disabled={this.props.disabled}
             >
                 {this.props.children}
             </button>
         );
+    }
+
+    protected getStyle(): React.CSSProperties {
+        if (this.props.disabled) {
+            return {
+                ...this.props.dark ? styles.disabled_dark : styles.disabled_normal,
+            };
+        } else {
+            return {
+                ...this.props.dark ? styles.dark : styles.normal,
+                ...this.state.hover ? this.getHoverStyle() : {},
+            };
+        }
+    }
+
+    protected getHoverStyle(): React.CSSProperties {
+        if (this.props.dark) {
+            return styles.hover_dark;
+        } else {
+            return styles.hover_normal;
+        }
     }
 
     protected getSizeInfo(): React.CSSProperties {

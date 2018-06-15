@@ -9,6 +9,8 @@ import { colors } from '../styles/color';
 
 export interface IProps {
     title: string;
+    style?: React.CSSProperties;
+    tight?: boolean;
 }
 
 const styles: {
@@ -44,7 +46,15 @@ class IndifferentContainer extends React.Component<IProps, {}> {
 
     public render(): JSX.Element {
         return (
-            <div style={styles.paper}>
+            <div style={{
+                ...styles.paper,
+                ...this.props.tight ? { margin: '0' } : {
+                    margin: '3px',
+                    marginTop: '12px',
+                    marginBottom: '12px',
+                },
+                ...this.props.style,
+            }}>
                 <div style={styles.title}>
                     {this.props.title}
                     <div style={styles.titleAfter}>
