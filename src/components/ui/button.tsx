@@ -11,6 +11,7 @@ export interface IProps {
     onClick?: () => void;
     style?: React.CSSProperties;
     className?: string;
+    flex?: number;
 }
 
 export interface IState {
@@ -22,7 +23,6 @@ const styles: {
 } = {
     container: {
         padding: '3px',
-        width: '100%',
         border: '0',
         backgroundColor: 'white',
         cursor: 'pointer',
@@ -39,6 +39,8 @@ class IndifferentButton extends React.Component<IProps, IState> {
             hover: false,
         };
 
+        this.getSizeInfo = this.getSizeInfo.bind(this);
+
         this.handleMouseIn = this.handleMouseIn.bind(this);
         this.handleMouseOut = this.handleMouseOut.bind(this);
     }
@@ -48,6 +50,7 @@ class IndifferentButton extends React.Component<IProps, IState> {
             <button
                 style={{
                     ...styles.container,
+                    ...this.getSizeInfo(),
                     ...this.state.hover ? styles.hover : {},
                     ...this.props.style,
                 }}
@@ -61,13 +64,25 @@ class IndifferentButton extends React.Component<IProps, IState> {
         );
     }
 
-    protected handleMouseIn() {
+    protected getSizeInfo(): React.CSSProperties {
+        if (this.props.flex) {
+            return {
+                flex: this.props.flex,
+            };
+        } else {
+            return {
+                width: '100%',
+            };
+        }
+    }
+
+    protected handleMouseIn(): void {
         this.setState({
             hover: true,
         });
     }
 
-    protected handleMouseOut() {
+    protected handleMouseOut(): void {
         this.setState({
             hover: false,
         });

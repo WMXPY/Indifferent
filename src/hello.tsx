@@ -24,12 +24,14 @@ class Hello extends React.Component<{}, {}> {
                     </Components.Button>
                 </Components.Paper >
                 <Components.Paper title="Button Group">
-                    <Components.Button>
-                        BUTTON1
-                    </Components.Button>
-                    <Components.Button>
-                        BUTTON2
-                    </Components.Button>
+                    <Components.Flex>
+                        <Components.Button>
+                            BUTTON1
+                        </Components.Button>
+                        <Components.Button>
+                            BUTTON2
+                        </Components.Button>
+                    </Components.Flex>
                 </Components.Paper >
             </React.Fragment>
         );
