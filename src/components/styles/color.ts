@@ -11,6 +11,7 @@ export const colors = {
     blue: '#0074D9',
     navy: '#001F3F',
     navyTrans: 'rgba(0, 31, 63, 0.3)',
+    navy_trans: 'rgba(0, 31, 63, 0.3)',
     orange: '#FF851B',
     maroon: '#85144b',
     yellow: '#FFDC00',
