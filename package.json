@@ -35,7 +35,7 @@
         "@types/react-dom": "^16.0.6",
         "awesome-typescript-loader": "^3.5.0",
         "code": "^5.2.0",
-        "copy-webpack-plugin": "^4.5.1",
+        "copy-webpack-plugin": "^4.5.2",
         "enzyme": "^3.3.0",
         "enzyme-adapter-react-16": "1.1.1",
         "ghoti-cli": "^3.5.1",
