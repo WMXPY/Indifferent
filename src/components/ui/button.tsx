@@ -60,11 +60,12 @@ const styles: {
 };
 
 class IndifferentButton extends React.Component<IProps, IState> {
+    public readonly state = {
+        hover: false,
+    };
+
     public constructor(props) {
         super(props);
-        this.state = {
-            hover: false,
-        };
 
         this.getStyle = this.getStyle.bind(this);
         this.getSizeInfo = this.getSizeInfo.bind(this);
