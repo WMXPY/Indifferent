@@ -1,6 +1,6 @@
 {
     "name": "indifferent",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": ":icecream: A indifferent UI for react",
     "private": false,
     "scripts": {
@@ -25,7 +25,7 @@
         "npm": ">=4.x"
     },
     "author": "WMXPY",
-    "license": "SEE LICENSE IN LICENSE",
+    "license": "MIT",
     "devDependencies": {
         "@types/code": "^4.0.4",
         "@types/enzyme": "^3.1.11",
