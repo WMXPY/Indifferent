@@ -1,12 +1,13 @@
 language: node_js
 
 install:
- - npm install
- - npm install --only=dev
- - tsc
+  - npm install
+  - npm install --only=dev
+  - tsc
 
 node_js:
- - '7'
- - '9'
+  - "10"
+  - "11"
+  - "12"
 
 script: npm test
