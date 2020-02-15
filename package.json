@@ -27,28 +27,27 @@
     "author": "WMXPY",
     "license": "MIT",
     "devDependencies": {
-        "@types/code": "^4.0.4",
-        "@types/enzyme": "^3.1.11",
-        "@types/enzyme-adapter-react-16": "^1.0.2",
+        "@types/code": "^4.0.5",
+        "@types/enzyme": "^3.10.5",
+        "@types/enzyme-adapter-react-16": "^1.0.6",
         "@types/mocha": "^5.2.4",
-        "awesome-typescript-loader": "^3.5.0",
-        "code": "^5.2.0",
-        "copy-webpack-plugin": "^4.5.2",
-        "enzyme": "^3.3.0",
+        "awesome-typescript-loader": "^5.2.1",
+        "copy-webpack-plugin": "^5.1.1",
+        "enzyme": "^3.11.0",
         "enzyme-adapter-react-16": "1.1.1",
-        "ghoti-cli": "^4.1.2",
+        "ghoti-cli": "^4.1.7",
         "html-webpack-plugin": "^3.2.0",
         "mocha": "^5.2.0",
         "react-hot-loader": "next",
-        "ts-node": "^7.0.0",
-        "tslint": "^5.10.0",
-        "typescript": "^2.9.2",
-        "webpack": "^3.10.0",
-        "webpack-dev-server": "^2.11.1"
+        "ts-node": "^8.6.2",
+        "tslint": "^6.0.0",
+        "typescript": "^3.7.5",
+        "webpack": "^4.41.6",
+        "webpack-dev-server": "^3.10.3"
     },
     "dependencies": {
-        "immutable": "^3.8.2",
-        "react": "^16.4.1",
-        "react-dom": "^16.4.1"
+        "immutable": "^1.0.0-rc.12",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0"
     }
 }
